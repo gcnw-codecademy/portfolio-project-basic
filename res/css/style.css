@@ -1,0 +1,104 @@
+* {
+    /* border: 1px solid red; */
+}
+
+nav {
+    display:block;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border: 1px solid rgb(40, 211, 71);
+}
+
+.navLinks {
+    /* background-color: black; */
+    overflow: hidden;
+    padding: 0 0 20px 0;
+}
+
+.navLinks li {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 5px 10px;
+    list-style: none;
+    text-decoration: none;
+    border: 2px dashed blueviolet;
+}
+
+main {
+    border: 1px solid rgb(28, 16, 163);
+}
+
+.skillContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.skillContainer li {
+    list-style: none;
+    text-align: center;
+    padding: 5px 10px;
+}
+
+.pastThings {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    justify-content: space-between;
+}
+
+.aboutMe {
+    display:inline-flex;
+    width: 100%;
+    border: 2px dashed plum;
+}
+
+#aboutTextBox {
+    display: none;
+}
+
+.projects {
+    display:inline-flex;
+    border: 2px dashed rgb(25, 135, 36)
+}
+
+.projectContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.projectContainer li {
+    list-style: none;
+    text-align: center;
+    padding: 5px 10px;
+}
+
+footer {
+    border: 1px solid red;
+    display: block;
+}
+
+.certificates {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border: 1px solid black;
+}
+
+.contactWidgets {
+    display:flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.contactWidgets li {
+    display: inline-flex;
+    float:left;
+    text-align: center;
+    list-style: none;
+    padding: 5px 10px;
+}
+

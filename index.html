@@ -3,6 +3,9 @@
     <head>
         <title>Portfolio Page</title>
         <link rel="stylesheet" href="./res/css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Monoton&family=Roboto+Condensed:ital,wght@0,300;1,700&display=swap" rel="stylesheet">
     </head>
     <body>
         <header></header>
@@ -20,37 +23,45 @@
         </nav>
         <main>
 <!-- ABOUT ME -->
+        <div class="mainContainer">
             <div class="mySkills">
-                <ul class="skillContainer">
-                    <li id="skillOne">Skill A</li>
-                    <li id="skillTwo">Skill B</li>
-                    <li id="skillThree">Skill C</li>
-                </ul>
+                <div class="skillContainer">
+                    <div id="skillCSS"><img src="./res/icons/CSS3_96.png" alt="CSS3 Icon"></div>
+                    <div id="skillHTML"><img src="./res/icons/HTML5_96.png" alt="HTML Icon"></div>
+                    <div id="skillThree"><img src="./res/icons/JS_96.png" alt="JavaScript Icon"></div>
+                </div>
             </div>
             <div class="pastThings">
                 <div class="aboutMe">
                     <div id="aboutImageBox">image</div>
                     <div id="aboutTextBox">text</div>
                 </div>
-    <!-- MY PROJECTS -->
+            <!-- MY PROJECTS -->
                 <div class="projects">
-                    <ul class="projectContainer">
-                        <li id="projectOne">A</li>
-                        <li id="projectTwo">B</li>
-                        <li id="projectThree">C</li>
-                    </ul>
+                    <div class="projectContainer">
+                        <div id="projectOne">A</div>
+                        <div id="projectTwo">B</div>
+                        <div id="projectThree">C</div>
+                    </div>
                 </div>
             </div>
+        </div>
         </main>
         <footer>
-            <div class="certificates"><p>certificate stuff goes here</p></div>
+            <div class="footerContainer">
+                <div class="certificateContainer">
+                    <div class="certificates">
+                        <p>certificate stuff goes here</p>
+                    </div>
+                </div>
 <!-- CONTACT INFO -->
-            <div class="contactWidgets">
-                <ul>
-                    <li class="emailWidget">email</li>
-                    <li class="discordWidget">discord</li>
-                    <li class="githubWidget">github</li>
-                </ul>
+                <div class="contactWidgets">
+                    <div class="widgetContainer">
+                        <div id="emailWidget"><img src="./res/icons/MAIL_96.png" alt="Email Icon"></div>
+                        <div id="discordWidget"><img src="./res/icons/DISCORD_96.png" alt="Discord Icon"></div>
+                        <div id="githubWidget"><img src="./res/icons/GITHUB_96.png" alt="GitHub Icon"></div>
+                    </div>
+                </div>
             </div>
         </footer>
     </body>

@@ -11,71 +11,76 @@ html {
     font-size: 16px;
 }
 
+@media only screen and (max-width: 1048px) {
+    html { 
+        font-size: 12px;
+    }
+}
+
 a, a:hover, a:visited, a:active {
     color: inherit;
     text-decoration: none;
    }
+/****************************[NAVIGATION]*******************************/
 
-nav {
+.navLinks {
     display:flex;
     position: sticky;
     top: 0;
     left: 0;
-    width: 100%;
     background-image: url('../images/navBackground.jpg');
-    background-size: 100%;
-
+    background-size: cover;
+    margin: 20px;
+    border-radius: 75px;
 }
 
-.navOpacity {
+
+.navContainer {
     display: flex;
-    /* background-color: rgba(255,255,255,0.4); */
+    width: 100%;
+    justify-content: center;
+    background-color: rgba(255,255,255,0.75);
+    }
 
-}
-
-.navLinks {
-    /* background-color: black; */
-    overflow: hidden;
-    text-decoration: none;
-}
-
-.navLinks li {
-    float: left;
+.navLinks div {
     color: black;
-    text-align: center;
     padding: 5px 0.75rem;
-    margin: 1rem;
-    list-style: none;
-    background-color: rgba(255, 255, 255, 0.869);
-    border-radius: 0.75rem;
+    /* margin: 1rem; */
     font-family: Arvo;
     font-size: 2rem;
+    justify-content: space-between;
+
 }
 
-main {
-    background-image: url('../images/mainBackground.jpg');
+@media only screen and (max-width: 1048px) {
+    
 }
+
+
 
 .mainContainer {
+    display: flex;
+    position:relative;
+    flex-direction: column;
 }
-
+/****************************[MY SKILLS]*******************************/
 .mySkills {
     display: flex;
     flex-direction: column;
+    margin: 10px -10px;
+    background-image: url('../images/mainBackground.jpg');
 }
 
 .skillContainer {
     display: flex;
     align-self: center;
     min-width: fit-content;
-    width: 50%;
-    justify-content: space-between;
-    border: 1px solid black;
-    background-color: rgba(70, 109, 74, 0.319);
+    width: 100%;
+    justify-content: space-around;
     border-radius: 15px;
-    margin-top: 10px;
     padding: 10px 1rem;
-}
+    background-color: rgba(255,255,255,0.5);
+    }
 
 .skillContainer div {
     padding: 5px 10px;
@@ -87,11 +92,14 @@ main {
 .pastThings {
     display: flex;
     justify-content: space-between;
+    /* background-image: url('../images/mainBackground.jpg'); */
+    background-image: url('../images/navBackground.jpg');
+    background-size: cover;
+    margin: 10px -10px;
 }
-
-.aboutMe {
+/****************************[ABOUT ME]*******************************/
+/* .aboutMe {
     display: flex;
-    justify-content: ce;
     position: relative;
     border-radius: 50px;
     justify-content: center;
@@ -108,7 +116,7 @@ main {
 
 #aboutText {
     font-size: larger;
-    color: aliceblue;
+    color: black;
     position: absolute;
     padding: 10px;
     margin: 10px;
@@ -122,71 +130,85 @@ main {
     box-shadow: 2px 2px 4px black;
     background-size: cover;
     min-height: 100%;
-}
-
+} */
+/****************************[PROJECTS]*******************************/
 .projects {
     display:flex;
-    overflow: scroll;
+    width: 100%;
+    justify-content: center;
+    background-color: rgba(255,255,255,0.25);
+
 }
 
 .projectContainer {
-    display: flex;
-    border-radius: 25px;
-    border: 1px solid black;
-    background-color: rgba(70, 109, 74, 0.319);
-    margin: 10px 0px;
-}
+    display: grid;
+    grid-template: repeat(2,1fr) / repeat(3, 1fr);
+    width: fit-content;    
+    
+    }
 
 .projectContainer div {
     border-radius: 25px;
-    box-shadow: 2px 2px 2px black;
+    border: 2px solid rgb(102, 255, 42);
     background-size: cover;
     margin: 1rem;
     overflow: hidden;
+    width: fit-content;
 }
 
 .projectContainer img {
     min-height: 100%;
+    background-position: center;
+    background-size: contain;
 }
 
+@media only screen and (max-width: 1048px) {
+    .projectContainer {
+        grid-template: repeat(3,1fr) / repeat(2, 1fr);
+    }
+}
+
+/****************************[CERTIFICATES]*******************************/
+.certificateContainer {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    border: 1px solid black; 
+    border-radius: 15px;
+    background-image: url('../images/mainBackground.jpg');
+    background-size: cover;
+}
+
+.certificates {
+    font-size: 2rem;
+    width:100%;
+    border-radius: 15px;
+    padding: 10px 1rem;
+    background-color: rgba(255,255,255,0.5);
+}
+
+.certificates p {
+    background-color: rgba(255,255,255,0.8);
+    text-align: center;
+}
 
 footer {
     display: flex;
     width: 100%;
-    background-image: url('../images/contactBackground.jpg');
-    background-size: cover;
 }
 
 .footerContainer {
     display: flex;
     flex-direction: column;
-    /* background-color: rgba(255,255,255,0.7); */
     width: 100%;
 }
 
-.certificateContainer {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-
-}
-
-.certificates {
-    background-color: rgba(0,0,0,0.7);
-    font-size: 2rem;
-    height:fit-content;
-    color: white;
-    border-radius: 10px;
-    padding: 0px 1rem;
-    margin: 10px 0px;
-}
-
+/****************************[CONTACT INFO]*******************************/
 .contactWidgets {
     display:flex;
     justify-content: center;
-    margin: 0px;
 }
-
 .widgetContainer {
     display: flex;
     justify-content: space-between;
@@ -194,15 +216,16 @@ footer {
     width: 50%;
     background-color: rgba(0,0,0,0.7);
     border-radius: 15px;
-    margin-bottom: 10px;
+    margin: 10px 0;
     padding: 10px 1rem;
+    background-image: url('../images/contactBackground.jpg');
+    background-size: cover;
+    border: 1px solid black;    
 }
-
 .widgetContainer div {
     display: flex;
-    /* padding: 0px 5px; */
-    /* margin: 10px 50px; */
     background-color: rgba(255,255,255,0.8);
     border-radius: 10px;
+    border: 1px solid black;
 }
 

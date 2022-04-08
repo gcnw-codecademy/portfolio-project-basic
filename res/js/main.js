@@ -1,9 +1,7 @@
-// const projects = [  'projectOne','projectTwo','projectThree','projectFour','projectFive','projectSix',
-//                     'skillCSS','skillHTML','skillJS', 'emailWidget','discordWidget','githubWidget',
-//                     'aboutNAV','projectNAV','certsNAV','contactNAV','futureNAV'];
-// const boxes = [];
-
-// projects.forEach(function(box){boxes.push(document.getElementById(box))});
+const projectElements = ['projectOne','projectTwo','projectThree','projectFour','projectFive','projectSix'];
+const skillElements = ['skillCSS','skillHTML','skillJS'];
+const contactElements = ['emailWidget','discordWidget','githubWidget'];
+const navElements = ['aboutNAV','projectNAV','certsNAV','contactNAV','futureNAV'];
 
 let boxFlash = elementID => {
     let flashID = document.getElementById(elementID);
@@ -19,6 +17,10 @@ let rebootNode = (nodeID, elementID) => {
     oldNode.parentNode.replaceChild(reboot, oldNode);
 }
 
+let projectFlash = () => {
+    projectElements.forEach(project => boxFlash(project));
+}
+
 let aboutNav = document.getElementById('aboutNav');
 let contactNav = document.getElementById('contactNav');
 let projectNav = document.getElementById('projectNav');
@@ -27,7 +29,7 @@ let futureNav = document.getElementById('futureNav');
 
 certsNav.addEventListener("click", function(){boxFlash("certContainer")});
 contactNav.addEventListener("click", function(){boxFlash("contact")});
-projectNav.addEventListener("click", function(){boxFlash("projects")});
+projectNav.addEventListener("click", function(){projectFlash()});
 
 
 

@@ -28,6 +28,7 @@ a, a:hover, a:visited, a:active {
     border-radius: 75px;
     border: 1px solid black;   
     overflow: hidden;
+    z-index: 2;
 }
 .navContainer {
     display: flex;
@@ -86,14 +87,13 @@ a, a:hover, a:visited, a:active {
 /****************************[PROJECTS]*******************************/
 .projects {
     display:flex;
-    background-color: rgba(0, 0, 0, 0.598);
+    background-color: rgba(255, 255, 255, 0.598);
     width: 100%;
 }
 .projectContainer {
     display: grid;
     width: 100%;
     grid-template: repeat(2,1fr) / repeat(3, 1fr);
-    /* background-image: linear-gradient(gold,rgba(255, 217, 0, 0.4), rgba(255, 217, 0, 0.1), rgba(0, 0, 255, 0.1),rgba(255, 217, 0, 0.1),rgba(255, 217, 0, 0.4), gold); */
 }
 .projectContainer div {
     width: fit-content;
@@ -172,4 +172,12 @@ a, a:hover, a:visited, a:active {
     box-shadow: 2px 2px 2px black;
     background-color: rgba(255,255,255,0.8);
 }
-
+/* ANIMATIONS */
+@keyframes glow {
+    from {
+        box-shadow: 0 0 20px -10px royalblue;
+    }
+    to {
+        box-shadow: 0 0 20px 10px royalblue;
+    }
+}

@@ -1,4 +1,4 @@
-const projectElements = ['projectOne','projectTwo','projectThree','projectFour','projectFive','projectSix'];
+const projectElements = ['projectOne','projectTwo',/*'projectThree'*/,'projectFour','projectFive','projectSix','projectSeven','projectEight', 'projectNine', 'projectTen'];
 const skillElements = ['skillCSS','skillHTML','skillJS'];
 const contactElements = ['emailWidget','discordWidget','githubWidget'];
 const navElements = ['aboutNAV','projectNAV','certsNAV','contactNAV','futureNAV'];

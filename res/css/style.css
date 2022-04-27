@@ -45,7 +45,7 @@ a, a:hover, a:visited, a:active {
     justify-content: space-between;
 }
 @media only screen and (max-width: 768px) {
-    #certsNav, #future {
+    #aboutNav, #futureNav {
         display: none;
     }
 }
@@ -89,18 +89,21 @@ a, a:hover, a:visited, a:active {
     width: 100%;
 }
 .projectContainer {
-    display: grid;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     width: 100%;
-    grid-template: repeat(2,1fr) / repeat(3, 1fr);
-    row-gap: 25px;    
 }
 .projectContainer div {
-    width: 400px;
+    width: 300px;
     justify-self: center;
     border-radius: 25px;
     border: 1px solid black;
-    background-size: cover;
-    overflow: hidden;
+    background-size: contain;
+    margin: 25px;
+    overflow: clip;
+
+
     
 }
 .projectContainer img {
@@ -113,6 +116,7 @@ a, a:hover, a:visited, a:active {
     .projectContainer {
         grid-template: repeat(3,1fr) / repeat(2, 1fr);
     }
+
 }
 @media only screen and (max-width: 900px) {
     .projectContainer {
